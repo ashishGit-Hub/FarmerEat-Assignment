@@ -28,7 +28,7 @@ class NetworkModule {
     @Provides
     fun providesRetrofit(): Retrofit.Builder {
         return Retrofit.Builder()
-            .baseUrl("https://sowlab.com/assignment/")
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
     }
