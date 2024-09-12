@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="48dp"
     android:background="@drawable/business_hours_rounded_bg"
-    android:backgroundTint="@color/secondary"
     android:textSize="14sp"
     android:gravity="center"
     android:id="@+id/text"
+    android:layout_marginHorizontal="3dp"
     android:fontFamily="@font/be_vietnam_regular"
     android:textColor="@color/primary_text"
     android:layout_marginBottom="10dp">

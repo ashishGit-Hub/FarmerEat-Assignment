@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     tools:context=".screens.signup.VerificationFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_margin="30dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -74,6 +75,7 @@
                 app:layout_constraintVertical_bias="0.5" />
 
             <ImageView
+                android:id="@+id/select_document"
                 android:layout_width="53dp"
                 android:layout_height="53dp"
                 android:background="@drawable/rounded_primary_bg"
@@ -85,21 +87,45 @@
                 app:layout_constraintVertical_bias="0.5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/attachment_proof_layout"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:fontFamily="@font/be_vietnam_regular"
-            android:text="@string/attach_proof_of_registration"
-            android:textColor="@color/black"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="16dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/input_text_bg"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            app:drawableEndCompat="@drawable/ic_close" />
+            app:layout_constraintVertical_bias="0.5">
+
+            <TextView
+                android:id="@+id/selected_file_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_text_bg"
+                android:fontFamily="@font/be_vietnam_regular"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/remove_proof_iv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="16dp"
+                android:src="@drawable/ic_close"
+                android:contentDescription="@string/remove_attached_proof_of_registration"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

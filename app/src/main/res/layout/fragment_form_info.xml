@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     tools:context=".screens.signup.FormInfoFragment">
 
 
@@ -54,133 +55,151 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/business_name_til"
+                style="@style/InputTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/input_text_bg"
-                android:drawableStart="@drawable/ic_business"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/be_vietnam_regular"
-                android:hint="@string/business_name"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName"
-                android:lines="1"
-                android:maxLength="1"
-                android:paddingHorizontal="16dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/light_text_30"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-                tools:ignore="LabelFor" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/input_text_bg"
-                android:drawableStart="@drawable/ic_informal"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/be_vietnam_regular"
-                android:hint="@string/informal_name"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName"
-                android:lines="1"
-                android:maxLength="1"
-                android:paddingHorizontal="16dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/light_text_30"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-                tools:ignore="LabelFor" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingVertical="14sp"
+                    android:inputType="text"
+                    android:hint="@string/business_name"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="10dp"
+                    android:textSize="14sp"
+                    android:drawableStart="@drawable/ic_business"
+                    android:textColorHint="@color/light_text_30"
+                    android:fontFamily="@font/be_vietnam_regular"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/input_text_bg"
-                android:drawableStart="@drawable/ic_home"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/be_vietnam_regular"
-                android:hint="@string/street_address"
-                android:importantForAutofill="no"
-                android:inputType="textPostalAddress"
-                android:lines="1"
-                android:maxLength="1"
-                android:paddingHorizontal="16dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/light_text_30"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-                tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/input_text_bg"
-                android:drawableStart="@drawable/ic_location"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/be_vietnam_regular"
-                android:hint="City"
-                android:importantForAutofill="no"
-                android:inputType="textPostalAddress"
-                android:lines="1"
-                android:maxLength="1"
-                android:paddingHorizontal="16dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/light_text_30"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-                tools:ignore="LabelFor" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/informal_name_til"
+                style="@style/InputTextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/input_text_bg"
-                android:drawableEnd="@drawable/ic_down_arrow"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/be_vietnam_regular"
-                android:hint="@string/re_enter_password"
-                android:importantForAutofill="no"
-                android:inputType="textPassword"
-                android:lines="1"
-                android:maxLength="1"
-                android:paddingHorizontal="16dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/light_text_30"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-                tools:ignore="LabelFor" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingVertical="14sp"
+                    android:inputType="text"
+                    android:hint="@string/informal_name"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="10dp"
+                    android:textSize="14sp"
+                    android:drawableStart="@drawable/ic_informal"
+                    android:textColorHint="@color/light_text_30"
+                    android:fontFamily="@font/be_vietnam_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/address_name_til"
+                style="@style/InputTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingVertical="14sp"
+                    android:inputType="text"
+                    android:hint="@string/street_address"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="10dp"
+                    android:textSize="14sp"
+                    android:drawableStart="@drawable/ic_home"
+                    android:textColorHint="@color/light_text_30"
+                    android:fontFamily="@font/be_vietnam_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/city_til"
+                style="@style/InputTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingVertical="14sp"
+                    android:inputType="text"
+                    android:hint="@string/city"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="10dp"
+                    android:textSize="14sp"
+                    android:drawableStart="@drawable/ic_location"
+                    android:textColorHint="@color/light_text_30"
+                    android:fontFamily="@font/be_vietnam_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/state_til"
+                style="@style/InputTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingVertical="14sp"
+                    android:inputType="text"
+                    android:hint="@string/state"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="10dp"
+                    android:textSize="14sp"
+                    android:drawableStart="@drawable/ic_state"
+                    android:textColorHint="@color/light_text_30"
+                    android:fontFamily="@font/be_vietnam_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/zip_code_til"
+                style="@style/InputTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingVertical="14sp"
+                    android:inputType="number"
+                    android:hint="@string/enter_zipcode"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:drawablePadding="10dp"
+                    android:textSize="14sp"
+                    android:drawableStart="@drawable/ic_zipcode"
+                    android:textColorHint="@color/light_text_30"
+                    android:fontFamily="@font/be_vietnam_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
-
 
     </ScrollView>
 

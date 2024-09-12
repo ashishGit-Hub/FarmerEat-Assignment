@@ -25,12 +25,23 @@
         <action
             android:id="@+id/action_forgotPasswordFragment_to_verifyOTPFragment"
             app:destination="@id/verifyOTPFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
         android:name="com.ashishpatel.softwarelab.screens.login.ResetPasswordFragment"
         android:label="fragment_reset_password"
-        tools:layout="@layout/fragment_reset_password" />
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/verifyOTPFragment"
         android:name="com.ashishpatel.softwarelab.screens.login.VerifyOTPFragment"
@@ -39,12 +50,24 @@
         <action
             android:id="@+id/action_verifyOTPFragment_to_resetPasswordFragment"
             app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_verifyOTPFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.ashishpatel.softwarelab.screens.signup.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_formInfoFragment"
+            app:destination="@id/formInfoFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_hoursFragment"
+            app:destination="@id/hoursFragment" />
+    </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
         android:name="com.ashishpatel.softwarelab.screens.signup.ConfirmationFragment"
@@ -54,7 +77,11 @@
         android:id="@+id/formInfoFragment"
         android:name="com.ashishpatel.softwarelab.screens.signup.FormInfoFragment"
         android:label="fragment_form_info"
-        tools:layout="@layout/fragment_form_info" />
+        tools:layout="@layout/fragment_form_info" >
+        <action
+            android:id="@+id/action_formInfoFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/hoursFragment"
         android:name="com.ashishpatel.softwarelab.screens.signup.HoursFragment"
@@ -64,5 +91,9 @@
         android:id="@+id/verificationFragment"
         android:name="com.ashishpatel.softwarelab.screens.signup.VerificationFragment"
         android:label="fragment_verification"
-        tools:layout="@layout/fragment_verification" />
+        tools:layout="@layout/fragment_verification" >
+        <action
+            android:id="@+id/action_verificationFragment_to_hoursFragment"
+            app:destination="@id/hoursFragment" />
+    </fragment>
 </navigation>

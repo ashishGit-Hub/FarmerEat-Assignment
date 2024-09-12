@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     tools:context=".screens.signup.HoursFragment">
 
 
@@ -67,11 +68,11 @@
                 android:id="@+id/monday"
                 android:layout_width="37dp"
                 android:layout_height="36dp"
-                android:background="@drawable/input_text_bg"
+                android:background="@drawable/react_primary_bg"
                 android:fontFamily="@font/be_vietnam_regular"
                 android:gravity="center"
                 android:text="@string/m"
-                android:textColor="@color/primary_text"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/tuesday"
@@ -83,11 +84,11 @@
                 android:id="@+id/tuesday"
                 android:layout_width="37dp"
                 android:layout_height="36dp"
-                android:background="@drawable/input_text_bg"
+                android:background="@drawable/stroke_bg"
                 android:fontFamily="@font/be_vietnam_regular"
                 android:gravity="center"
                 android:text="@string/t"
-                android:textColor="@color/primary_text"
+                android:textColor="@color/primary_text_30"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/wednesday"
@@ -99,11 +100,11 @@
                 android:id="@+id/wednesday"
                 android:layout_width="37dp"
                 android:layout_height="36dp"
-                android:background="@drawable/react_primary_bg"
+                android:background="@drawable/stroke_bg"
                 android:fontFamily="@font/be_vietnam_regular"
                 android:gravity="center"
                 android:text="@string/w"
-                android:textColor="@color/white"
+                android:textColor="@color/primary_text_30"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/thursday"
@@ -182,7 +183,8 @@
             android:id="@+id/business_hours_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="-3dp"/>
 
     </LinearLayout>
 

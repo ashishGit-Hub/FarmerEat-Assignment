@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.jetbrainsKotlinKapt)
     alias(libs.plugins.daggerHiltAndroid)
+//    alias(libs.plugins.navigationSafeargs)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -61,6 +63,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.auth)
+    implementation(libs.play.services.auth)
+    implementation(libs.googleid)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -75,4 +80,8 @@ dependencies {
     implementation(libs.squareup.retrofit2.converter.gson)
     implementation(libs.squareup.okhttp3.okhttp)
     implementation(libs.squareup.okhttp3.logging.interceptor)
+
+    // GOogle Auth
+    implementation(libs.androidx.credentials.credentials)
+    implementation(libs.androidx.credentials.credentials.play.services.auth)
 }
