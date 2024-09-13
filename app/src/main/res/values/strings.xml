@@ -70,4 +70,6 @@
     <string name="main_activity_msg">Hang tight! We are currently reviewing your account and will follow up with you in 2-3 business days. In the meantime, you can setup your inventory.</string>
     <string name="success">Success</string>
     <string name="loading">Loading...</string>
+    <string name="slider_indicator">Slider Indicator</string>
+    <string name="you_re_all_done">You’re all done!</string>
 </resources>

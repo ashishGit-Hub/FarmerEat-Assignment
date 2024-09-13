@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:fontFamily="@font/be_vietnam_bold"
-            android:text="@string/forgot_password"
+            android:text="@string/you_re_all_done"
             android:textColor="@color/primary_text"
             android:textSize="32sp"
             app:layout_constraintStart_toStartOf="parent"

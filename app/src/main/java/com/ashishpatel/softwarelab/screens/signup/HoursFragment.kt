@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ashishpatel.softwarelab.R
 import com.ashishpatel.softwarelab.activities.MainActivity
@@ -67,6 +68,11 @@ class HoursFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.backBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
 
         binding.businessHoursRv.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.businessHoursRv.setHasFixedSize(false)

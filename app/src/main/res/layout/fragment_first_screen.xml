@@ -10,9 +10,11 @@
     <ImageView
         android:id="@+id/iv_1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:src="@drawable/ic_quality"
         android:layout_marginTop="32dp"
+        app:layout_constraintDimensionRatio="1:1
+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_onboard_1"
+            android:contentDescription="@string/slider_indicator"
             android:layout_marginTop="27dp"/>
 
         <Button
@@ -74,9 +77,6 @@
             android:fontFamily="@font/be_vietnam_medium"
             android:textSize="14sp"/>
 
-
-
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

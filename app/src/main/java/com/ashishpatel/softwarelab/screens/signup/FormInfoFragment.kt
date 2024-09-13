@@ -38,6 +38,10 @@ class FormInfoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.backBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         binding.businessNameTil.editText?.setText(viewModel.businessDetails.businessName)
         binding.informalNameTil.editText?.setText(viewModel.businessDetails.informalName)
         binding.addressNameTil.editText?.setText(viewModel.businessDetails.address)

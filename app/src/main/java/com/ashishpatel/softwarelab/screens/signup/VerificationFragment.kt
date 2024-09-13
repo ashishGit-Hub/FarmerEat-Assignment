@@ -39,6 +39,11 @@ class VerificationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.backBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+
         binding.selectDocument.setOnClickListener {
             pickPdf.launch("application/pdf")
         }

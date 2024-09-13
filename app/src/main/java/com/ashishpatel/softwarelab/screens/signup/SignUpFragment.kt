@@ -76,6 +76,10 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.loginBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         binding.fullNameTil.editText?.setText(viewModel.userDetails.fullName)
         binding.emailTil.editText?.setText(viewModel.userDetails.email)
         binding.phoneNumberTil.editText?.setText(viewModel.userDetails.phone)
